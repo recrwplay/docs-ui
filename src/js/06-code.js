@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var code = block.innerHTML
     var language = block.hasAttribute('class') &&
-      block.getAttribute('class').match(/language-([a-z0-9-])+/i)[0].replace('language-', '').replace('csharp','C#')
+      block.getAttribute('class').match(/language-([a-z0-9-])+/i)[0].replace('language-', '').replace('csharp', 'C#')
 
     if (language && ignore.indexOf(language.toLowerCase()) > -1) return
 
@@ -285,7 +285,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (storageAvailable('sessionStorage')) {
     var sessionStorage = window.sessionStorage
-    // sessionStorage.setItem('code_example_language', 'java')
   }
   var storedLanguage = getCodeExampleLanguage()
 
@@ -355,7 +354,6 @@ document.addEventListener('DOMContentLoaded', function () {
         element.classList.add('tabbed-target')
         if (element.getAttribute('data-lang') === storedLanguage) {
           element.classList.add('tabbed-target--active')
-          // console.log(element.parentElement)
           activeAdded = true
         }
       })
