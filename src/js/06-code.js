@@ -70,6 +70,29 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.removeChild(textarea)
   }
 
+  var casedLang = function (lang) {
+    var cased = lang
+    switch (lang) {
+      case 'csharp':
+      case 'dotnet':
+        cased = 'C#'
+        break
+      case 'go':
+        cased = 'Go'
+        break
+      case 'java':
+        cased = 'Java'
+        break
+      case 'javascript':
+        cased = 'JavaScript'
+        break
+      case 'python':
+        cased = 'Python'
+        break
+    }
+    return cased
+  }
+
   var addCodeHeader = function (pre) {
     var dotContent = pre.parentElement
     var listingBlock = dotContent.parentElement
@@ -84,7 +107,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var code = block.innerHTML
     var language = block.hasAttribute('class') &&
-      block.getAttribute('class').match(/language-([a-z0-9-])+/i)[0].replace('language-', '').replace('csharp', 'C#')
+      block.getAttribute('class').match(/language-([a-z0-9-])+/i)[0].replace('language-', '')
+
+    language = casedLang(language)
 
     if (language && ignore.indexOf(language.toLowerCase()) > -1) return
 
@@ -323,10 +348,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Build up tabs
       var tabs = elements.map(function (element) {
-        var tabText = element.getAttribute('data-lang')
-        if (tabText === 'csharp' || tabText === 'dotnet') {
-          tabText = 'C#'
-        }
+        var tabText = casedLang(element.getAttribute('data-lang'))
         var tabElement = createElement('li', 'tabbed-tab', [document.createTextNode(tabText)])
 
         element.dataset.title = tabText
