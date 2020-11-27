@@ -144,7 +144,9 @@ page:
     - content: Training enrollement
       url: training-enrollment.html
       urlType: internal
-
+    - content: Drivers tabs
+      url: drivers-tabs.html
+      urlType: internal
 
 asciidoc:
   attributes:
