@@ -248,7 +248,7 @@
               </ul>
             </div>
 
-            {{#if (or (eq "3.5" page.attributes.neo4j-version) (eq "4.0" page.attributes.neo4j-version) (eq "4.1" page.attributes.neo4j-version)) }}
+            {{#if (and (eq "docs" page.attributes.theme) (or (eq "3.5" page.version) (eq "4.0" page.version) (eq "4.1" page.version))) }}
             <div class="navbar-item project">
               <a class="project-name" href="/docs/driver-manual/current/">Driver Manual</a>
             </div>
