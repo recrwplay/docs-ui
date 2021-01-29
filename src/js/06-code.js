@@ -103,10 +103,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var div = pre.parentNode
 
     var code = block.innerHTML
+
     var language = block.hasAttribute('class') &&
       block.getAttribute('class').match(/language-([a-z0-9-])+/i)[0].replace('language-', '')
 
-    if (language && ignore.indexOf(language.toLowerCase()) > -1) return
+    if (language && ignore.indexOf(language.toLowerCase()) > -1) return  
 
     var languageDiv = document.createElement('div')
     languageDiv.className = 'code-language'
@@ -115,6 +116,17 @@ document.addEventListener('DOMContentLoaded', function () {
       languageDiv.innerHTML = casedLang(language)
     }
     var children = [languageDiv]
+
+    var originalTitle = div.parentNode.querySelector('.title')
+    if (originalTitle) {
+      var titleDiv = document.createElement('div')
+      titleDiv.className = 'code-title'
+      titleDiv.innerHTML = originalTitle.innerHTML
+
+      originalTitle.style.display = 'none'
+
+      children.push(titleDiv)
+    }
 
     if (addCopyButton) {
       var copyButton = createElement('button', 'btn btn-copy', [document.createTextNode('Copy to Clipboard')])
@@ -153,17 +165,6 @@ document.addEventListener('DOMContentLoaded', function () {
       })
 
       children.push(runButton)
-    }
-
-    var originalTitle = div.parentNode.querySelector('.title')
-    if (originalTitle) {
-      var titleDiv = document.createElement('div')
-      titleDiv.className = 'code-title'
-      titleDiv.innerHTML = originalTitle.innerHTML
-
-      originalTitle.style.display = 'none'
-
-      children.unshift(titleDiv)
     }
 
     var header = createElement('div', 'code-header', children)

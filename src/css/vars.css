@@ -140,8 +140,8 @@
   /* nav */
   --nav-background: var(--panel-background);
   --nav-border-color: var(--colour-grey-200);
-  --nav-font-weight: 400;
-  --nav_active-font-weight: 400;
+  --nav-font-weight: var(--body-font-weight);
+  --nav_active-font-weight: var(--body-font-weight-bold);
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--colour-grey-500);
   --nav-muted-color: var(--colour-grey-400);
@@ -206,11 +206,11 @@
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--panel-background);
   --code-font-color: var(--body-font-color);
-  --code-header-background: var(--colour-grey-800);
-  --code-header-font-color: var(--colour-grey-100);
-  --code-button-background: var(--colour-grey-700);
+  --code-header-background: var(--panel-background);
+  --code-header-font-color: var(--colour-grey-800);
+  --code-button-background: var(--panel-background);
   --code-button-active-background: var(--colour-grey-600);
-  --code-button-font-color: var(--colour-white);
+  --code-button-font-color: var(--colour-grey-800);
   --example-background: var(--colour-white);
   --example-border-color: var(--colour-grey-700);
   --kbd-background: var(--panel-background);

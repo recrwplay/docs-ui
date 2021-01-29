@@ -29,21 +29,23 @@ body {
 .doc h5,
 .doc h6 {
   color: var(--heading-font-color);
-  font-weight: var(--heading-font-weight);
+  font-weight: var(--alt-heading-font-weight);
   hyphens: none;
   line-height: 1.3;
   margin: 2rem 0 1rem;
 }
 
+.doc h1 {
+  margin: 2rem 0;
+}
+
 .doc h4 {
-  font-weight: 600;
   font-size: 1rem;
 }
 
 .doc h5 {
-  font-weight: 600;
   font-size: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: var(--colour-grey-600);
 }
 
@@ -71,7 +73,7 @@ body {
 }
 
 .doc h2:not(.discrete) {
-  border-bottom: 1px solid var(--section-divider-color);
+  /* border-bottom: 1px solid var(--section-divider-color); */
   /* margin-left: -1rem;
   margin-right: -1rem; */
   padding: 0.4rem 0 0.5rem;
@@ -659,7 +661,7 @@ body {
   display: block;
   overflow-x: auto;
   padding: 0.75rem;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 }
 
 /* NOTE assume pre.highlight contains code[data-lang] */
@@ -800,7 +802,7 @@ body {
 
 .doc th.tableblock,
 .doc td.tableblock {
-  word-break: break-word; /* overflow-wrap for table cells; gives space higher precedence than hyphen opportunity */
+  overflow-wrap: break-word; /* overflow-wrap for table cells; gives space higher precedence than hyphen opportunity */
 }
 
 .doc pre.has-header {
@@ -825,24 +827,29 @@ body {
 
 .doc .code-header .code-title {
   color: var(--colour-grey-500);
-  padding-right: 0.5em;
+  padding: 0.6rem;
+  margin: 0 0.25rem;
+  flex-grow: 1;
+  border-bottom: 4px solid var(--table-border-color);
 }
 
 .doc .code-header .code-language {
-  flex-grow: 1;
+  /* flex-grow: 1; */
   padding: 0.6rem 0;
+  border-bottom: 4px solid var(--table-border-color);
 }
 
 .doc .code-header .btn {
   border: 0 none;
   background: transparent;
   color: var(--code-button-font-color) !important;
-  margin: 0.25rem 0 0.25rem 0.5rem;
+  margin: 0 0.25rem;
   padding: 0.6rem 0;
   border-radius: 0.175rem;
   font-weight: var(--body-font-weight-bold);
   line-height: 1;
   text-align: center;
+  border-bottom: 4px solid var(--colour-green-600);
 }
 
 .doc .code-header .btn:focus {
