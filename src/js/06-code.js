@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var language = block.hasAttribute('class') &&
       block.getAttribute('class').match(/language-([a-z0-9-])+/i)[0].replace('language-', '')
 
-    if (language && ignore.indexOf(language.toLowerCase()) > -1) return  
+    if (language && ignore.indexOf(language.toLowerCase()) > -1) return
 
     var languageDiv = document.createElement('div')
     languageDiv.className = 'code-language'
