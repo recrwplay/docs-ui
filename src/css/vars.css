@@ -206,11 +206,11 @@
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--panel-background);
   --code-font-color: var(--body-font-color);
-  --code-header-background: var(--colour-grey-800);
-  --code-header-font-color: var(--colour-grey-100);
-  --code-button-background: var(--colour-grey-700);
+  --code-header-background: var(--panel-background);
+  --code-header-font-color: var(--colour-grey-700);
+  --code-button-background: var(--panel-background);
   --code-button-active-background: var(--colour-grey-600);
-  --code-button-font-color: var(--colour-white);
+  --code-button-font-color: var(--colour-grey-700);
   --example-background: var(--colour-white);
   --example-border-color: var(--colour-grey-700);
   --kbd-background: var(--panel-background);
