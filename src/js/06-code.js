@@ -163,13 +163,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
       originalTitle.style.display = 'none'
 
-      div.insertBefore(titleDiv,pre)
+      div.insertBefore(titleDiv, pre)
     }
     // var titleBlock = createElement('div','code-title', titleEl)
     var header = createElement('div', 'code-header', children)
 
     pre.className += ' has-header'
-    
+
     div.insertBefore(header, pre)
   }
 
