@@ -156,6 +156,9 @@ page:
     - content: Docs roles
       url: docs-roles.html
       urlType: internal
+    - content: Docs labels
+      url: docs-labels.html
+      urlType: internal
     - content: Deprecated
       url: deprecated.html
       urlType: internal
@@ -176,6 +179,8 @@ page:
       urlType: internal
 
 asciidoc:
+  extensions:
+  - \@neo4j-documentation/macros
   attributes:
     theme: labs
     # cdn: https://neo4j-appli-t0bbh89jwvia-895689428.us-east-1.elb.amazonaws.com/static/assets

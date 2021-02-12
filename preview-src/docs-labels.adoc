@@ -1,0 +1,48 @@
+= Docs labels
+
+
+[abstract]
+--
+Flags sections as Enterprise Edition, Fabric, Deprecated
+--
+
+Blocks with the appropriate roles have text appended.
+
+== Fabric Heading label:fabric[]
+
+Lorem ipsum
+
+== Enterprise Edition content label:enterprise-edition[]
+
+Lorem ipsum
+
+== Deprecated content label:deprecated[]
+
+Other blocks can have deprecated roles added.
+
+.Example block title
+====
+Example 1 content - this example is not deprecated
+====
+
+label:deprecated[]
+.Example 2 title
+====
+Example 2 content - this example is deprecated
+====
+
+== Alpha content label:alpha[]
+
+label:alpha[]
+[.tier-note]
+This algorithm is in the alpha tier.
+For more information on algorithm tiers, see <<algorithms>>.
+
+label:alpha[] This sentence is prepended with an alpha label
+
+== Beta content label:beta[]
+
+label:beta[]
+[.tier-note]
+This algorithm is in the beta tier.
+For more information on algorithm tiers, see <<algorithms>>.

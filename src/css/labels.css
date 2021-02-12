@@ -39,3 +39,23 @@
   background: var(--colour-orange-300);
   color: var(--colour-orange-800);
 }
+
+.label--enterprise-edition {
+  color: var(--colour-green-200);
+  background: var(--colour-green-700);
+}
+
+.label--fabric {
+  background: var(--colour-blue-200);
+  color: var(--colour-blue-700);
+}
+
+.label--alpha {
+  background: var(--colour-orange-600);
+  color: var(--colour-orange-200);
+}
+
+.label--beta {
+  background: var(--colour-orange-600);
+  color: var(--colour-orange-200);
+}
