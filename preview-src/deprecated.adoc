@@ -2,6 +2,8 @@
 = This entire topic is deprecated
 :page-role: deprecated
 
+label:deprecated[]
+
 [abstract]
 --
 Flags all sections as Deprecated
@@ -20,4 +22,18 @@ Lorem ipsum
 == Deprecated Heading 3
 
 Lorem ipsum
+
+=== Deprecated SubHeading 1
+
+Lorem ipsum
+
+=== SubHeading 2
+
+llllll
+
+llllll.
+
+paragraph 3
+
+p4
 

@@ -8,97 +8,6 @@
   border: 2px solid var(--note-color);
 }
 
-section.deprecated .title::after {
-  bottom: 4px;
-  margin-left: 10px;
-}
-
-body.alpha article h1::after,
-body.beta article h1::after,
-body.deprecated article h1::after,
-body.deprecated article h2::after,
-body.deprecated article h3::after,
-body.deprecated article h4::after,
-div.deprecated h2::after,
-div.deprecated h3::after,
-div.deprecated h4::after,
-body.deprecated article dt::after,
-p.deprecated::before,
-section.deprecated .title::after,
-table span.deprecated::after,
-.deprecated > .title::after,
-section.enterprise-edition .title::after,
-body.enterprise-edition article h1::after,
-div.enterprise-edition h2::after,
-div.enterprise-edition h3::after,
-div.enterprise-edition h4::after,
-p.enterprise-edition::before,
-table span.enterprise-edition::after,
-body.fabric article h1::after,
-body.fabric article h2::after,
-body.fabric article h3::after,
-body.fabric article h4::after,
-div.fabric h2::after,
-div.fabric h3::after,
-div.fabric h4::after,
-section.fabric .title::after,
-p.fabric::before,
-table span.fabric::after {
-  text-align: center;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-weight: normal;
-  font-size: 0.6em;
-  position: relative;
-  box-sizing: border-box;
-  padding: 5px 8px;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 6px;
-  bottom: 2px;
-  margin-left: 8px;
-}
-
-body.deprecated article h1::after,
-body.deprecated article h2::after,
-body.deprecated article h3::after,
-body.deprecated article h4::after,
-div.deprecated h2::after,
-div.deprecated h3::after,
-div.deprecated h4::after,
-.deprecated dt::after,
-p.deprecated::before,
-section.deprecated .title::after,
-.deprecated > .title::after,
-table span.deprecated::after {
-  content: "deprecated";
-  color: var(--deprecation-color);
-  border-color: var(--deprecation-color);
-}
-
-body.enterprise-edition article h1::after,
-div.enterprise-edition h2::after,
-div.enterprise-edition h3::after,
-div.enterprise-edition h4::after,
-p.enterprise-edition::before,
-section.enterprise-edition .title::after,
-table span.enterprise-edition::after {
-  content: "Enterprise Edition";
-  color: var(--enterprise-edition-color);
-  border-color: var(--enterprise-edition-color);
-}
-
-body.fabric article h1::after,
-div.fabric h2::after,
-div.fabric h3::after,
-div.fabric h4::after,
-p.fabric::before,
-section.fabric .title::after,
-table span.fabric::after {
-  content: "Fabric";
-  color: var(--fabric-color);
-  border-color: var(--fabric-color);
-}
-
 .admonitionblock td.icon .icon-::before {
   content: "\f088";
   color: #f58220;
@@ -114,9 +23,9 @@ table span.fabric::after {
 }
 
 .doc .admonitionblock.deprecated {
-  background-color: var(--colour-pink-200);
-  color: var(--colour-pink-900);
-  border-left-color: var(--colour-pink-600);
+  background: var(--colour-orange-300);
+  color: var(--colour-orange-800);
+  border-left-color: var(--colour-orange-800);
 }
 
 .doc .admonitionblock.deprecated pre {
@@ -125,7 +34,7 @@ table span.fabric::after {
 }
 
 .doc .admonitionblock.deprecated a {
-  color: var(--colour-red-600);
+  color: var(--colour-blue-600);
 }
 
 .doc pre {
@@ -150,6 +59,18 @@ table span.fabric::after {
 
 body.alpha article h1::after,
 body.beta article h1::after {
+  text-align: center;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 0.6em;
+  position: relative;
+  box-sizing: border-box;
+  padding: 5px 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  bottom: 2px;
+  margin-left: 8px;
   color: var(--alpha-beta-color);
 }
 
