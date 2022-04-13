@@ -221,10 +221,10 @@
 pre[class*=language-] {
   padding: 0;
   margin: 0;
-  overflow: auto
+  overflow: auto;
 }
 
-:not(pre)>code[class*=language-],
+:not(pre) > code[class*=language-],
 pre[class*=language-] {
   background: var(--pre-background);
 }
@@ -241,20 +241,18 @@ pre[class*=language-] {
 
 /* buttons */
 
-div.code-toolbar>.toolbar {
+div.code-toolbar > .toolbar {
   right: 0.6rem;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-div.code-toolbar>.toolbar>.toolbar-item>button,
-div.code-toolbar>.toolbar>.toolbar-item>a,
-div.code-toolbar>.toolbar>.toolbar-item>span {
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > span {
   border: 0 none;
-  background: transparent;
   color: var(--code-button-font-color) !important;
   margin: 0.25rem 0 0.25rem 0.5rem;
-  padding: 0.6rem 0;
   border-radius: 0.175rem;
   font-weight: var(--body-font-weight-bold);
   line-height: 1;
@@ -265,15 +263,15 @@ div.code-toolbar>.toolbar>.toolbar-item>span {
   display: inline-block;
 }
 
-div.code-toolbar>.toolbar>.toolbar-item>:not(button) {
+div.code-toolbar > .toolbar > .toolbar-item > :not(button) {
   opacity: 0;
 }
 
-div.code-toolbar:hover>.toolbar>.toolbar-item>:not(button) {
+div.code-toolbar:hover > .toolbar > .toolbar-item > :not(button) {
   opacity: 0;
 }
 
-div.code-toolbar:focus-within>.toolbar>.toolbar-item>:not(button) {
+div.code-toolbar:focus-within > .toolbar > .toolbar-item > :not(button) {
   opacity: 0;
 }
 

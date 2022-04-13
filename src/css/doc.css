@@ -707,7 +707,7 @@ body {
 }
 
 .doc pre:not(.highlight),
-.doc pre.highlight:not(.line-numbers) code  {
+.doc pre.highlight:not(.line-numbers) code {
   border-radius: 0.5rem;
   border: 1px solid var(--pre-border-color) !important;
 }
