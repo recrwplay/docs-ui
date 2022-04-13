@@ -704,6 +704,10 @@ body {
   display: block;
   overflow-x: auto;
   padding: 0.75rem;
+}
+
+.doc pre:not(.highlight),
+.doc pre.highlight:not(.line-numbers) code  {
   border-radius: 0.5rem;
   border: 1px solid var(--pre-border-color) !important;
 }

@@ -14,7 +14,8 @@
 @import "pagination.css";
 @import "header.css";
 @import "footer.css";
-@import "highlight.css";
+/* @import "highlight.css"; */
+@import "prism.css";
 @import "print.css";
 @import "gram.css";
 @import "labels.css";

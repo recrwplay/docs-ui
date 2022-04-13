@@ -456,7 +456,7 @@ line of code % <1>
 
 The next source block contains characters that should be copied and then pasted unescaped (ie `<` and `>`).
 
-[source,json]
+[source,json,role="line-numbers"]
 ----
 {
   "name": "module-name",
@@ -473,7 +473,7 @@ The next source block contains characters that should be copied and then pasted 
 Do something else with <<NEO4J_HOME>>.
 
 .Example paragraph syntax
-[source,asciidoc]
+[source,asciidoc,role="line-numbers"]
 ----
 .Optional title
 [example]
@@ -489,6 +489,23 @@ This is an example paragraph.
 How about some code?
 
 [source,js]
+----
+vfs
+  .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
+  .pipe(tap((file) => { // <1>
+    file.contents = browserify(file.relative, { basedir: 'src', detectGlobals: false }).bundle()
+  }))
+  .pipe(buffer()) // <2>
+  .pipe(uglify())
+  .pipe(gulp.dest('build'))
+----
+<1> The tap function is used to wiretap the data in the pipe.
+<2> Wrap each streaming file in a buffer so the files can be processed by uglify.
+Uglify can only work with buffers, not streams.
+
+How about some code with line numbers?
+
+[source,js,role="line-numbers"]
 ----
 vfs
   .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })

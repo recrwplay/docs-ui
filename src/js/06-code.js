@@ -99,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (listingBlock.classList.contains('noheader')) return
 
-    var addCopyButton = !listingBlock.classList.contains('nocopy')
     var addPlayButton = !listingBlock.classList.contains('noplay')
 
     var block = pre.querySelector('code')
@@ -119,29 +118,6 @@ document.addEventListener('DOMContentLoaded', function () {
       languageDiv.innerHTML = casedLang(language)
     }
     var children = [languageDiv]
-
-    if (addCopyButton) {
-      var copyButton = createElement('button', 'btn btn-copy', [document.createTextNode('Copy to Clipboard')])
-      copyButton.addEventListener('click', function (e) {
-        e.preventDefault()
-        copyToClipboard(code, language)
-
-        var button = e.target
-        var text = button.innerHTML
-        var width = button.clientWidth
-
-        button.style.width = width + 'px'
-        button.classList.add('btn-success')
-        button.innerHTML = copiedText
-
-        setTimeout(function () {
-          button.innerHTML = text
-          button.classList.remove('btn-success')
-        }, 1000)
-      })
-
-      children.push(copyButton)
-    }
 
     if (language === 'cypher' && addPlayButton) {
       var runButton = createElement(
