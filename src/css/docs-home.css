@@ -49,8 +49,25 @@ body.docshome .doc div:not(.display) h2 {
   display: none;
 }
 
-body.docshome .nav-item:not(.is-active) > .nav-list {
-  display: block;
+body.docshome .nav-menu .component-title {
+  display: none;
+}
+
+body.docshome .nav-menu > .nav-list {
+  margin-top: 3.25rem;
+}
+
+body.docshome .nav-item .nav-item-toggle {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+body.docshome .nav-item > span {
+  padding-left: 1.5rem;
+}
+
+body.docshome .nav-item > a {
+  padding-left: 2rem;
 }
 
 body.landing .toc {
