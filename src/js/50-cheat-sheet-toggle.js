@@ -3,6 +3,29 @@ import { createElement } from './modules/dom'
 document.addEventListener('DOMContentLoaded', function () {
   const csSelector = '#cheat-sheet-selector'
   const cs = document.querySelector(csSelector)
+  const queryString = window.location.search
+  console.log(queryString)
+
+  const urlParams = new URLSearchParams(queryString)
+
+  if (urlParams.has('product')) {
+    const product = urlParams.get('product')
+    // set the default for the product
+    const options = cs.options
+    console.log(options)
+
+    // change selected value in options list
+    let match = false
+    for (const option of options) {
+      if (option.label === decodeURIComponent(product) || option.value === decodeURIComponent(product)) {
+        cs.selectedIndex = option.index
+        match = true
+      }
+    }
+    if (!match) {
+      // display some html to say that the url params are not right?
+    }
+  }
 
   if (!cs) return
 
@@ -89,14 +112,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function addLabel (el, match) {
     const div = createElement('div', 'paragraph')
-    // if (el.classList.contains('sect2')) div.classList.add('page-labels')
     if (el.classList.contains('exampleblock')) div.classList.add('labels')
     else div.classList.add('page-labels')
     const p = createElement('p')
     const span = createElement('span', `label label--${match}`)
 
     const text = optionMap.find((label) => label.value === match).text
-    // console.log(text)
+
     span.textContent = text
     p.appendChild(span)
 
@@ -139,6 +161,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // fake a scroll event to trigger feedback scroll event
     window.scrollTo(window.scrollX, window.scrollY - 1)
   })
+  const matchTo = parseFloat(document.querySelector('.nav-container .selectors').getBoundingClientRect().height)
+  const firstSection = document.querySelector('article h2')
+  firstSection.style.height = `${matchTo}px`
+  firstSection.style.margin = 0
+  firstSection.style.lineHeight = `${matchTo}px`
 })
 
 function clearHidden () {

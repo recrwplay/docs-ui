@@ -1,3 +1,12 @@
+
+{{#if (eq page.attributes.theme 'cheat-sheet') }}
+  <aside class="toc sidebar" data-title="{{or page.attributes.toctitle ''}}"
+  data-levels="{{{or page.attributes.toclevels 2}}}">
+  <div class="toc-menu">
+    <div class="toc-menu-placeholder"></div>
+  </div>
+</aside>
+{{#else}}
   <div class="nav-panel-types{{#unless page.navigation}} is-active{{/unless}}" data-panel="explore">
     <div class="dropdown">
       <select id="cheat-sheet-selector" class="cs-selector dropdown-styles">
@@ -11,10 +20,4 @@
       </select>
   </div>
 </div>
-
-  <aside class="toc sidebar" data-title="{{or page.attributes.toctitle ''}}"
-  data-levels="{{{or page.attributes.toclevels 2}}}">
-  <div class="toc-menu">
-    <div class="toc-menu-placeholder"></div>
-  </div>
-</aside>
+{{/if}}
