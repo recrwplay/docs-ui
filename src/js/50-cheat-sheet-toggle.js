@@ -100,8 +100,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let labelsToAdd = notSelectable
     if (selectable.toString() !== visibleOptionNames.toString()) labelsToAdd = labelsToAdd.concat(selectable)
 
+    console.log(labelsToAdd)
+
     if (labelsToAdd && matches.length > 0) {
-      labelsToAdd.sort().forEach((label) => {
+      labelsToAdd.forEach((label) => {
         addLabel(el, label)
       })
     }
@@ -127,16 +129,18 @@ document.addEventListener('DOMContentLoaded', function () {
     p.appendChild(span)
 
     // if there is a label div, add the new label
-    const labelsDiv = el.firstElementChild.querySelector(`div.${labelType}`)
+    // if no label div yet, add this label to the new div and insert the new div
+    // note: where it is inserted depends on whether it is a labels div or page-labels div
+    const labelsDiv = (labelType === 'labels') ? el.firstElementChild.querySelector(`div.${labelType}`) : el.querySelector(`div.${labelType}`)
+    console.log(labelsDiv)
     if (labelsDiv) {
       labelsDiv.append(p)
     } else {
       div.appendChild(p)
-
       if (labelType === 'labels') {
         el.firstElementChild.prepend(div)
       } else {
-        el.firstElementChild.after(div)
+        el.firstElementChild.after(div) // for a page label we assume that the first child is h2 or h3
       }
     }
   }

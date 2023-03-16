@@ -282,8 +282,79 @@ Deprecated cypher example.
 ====
 
 
+== Functions
+
+
 === Temporal functions
 
+
+====
+[source, cypher, role=noheader]
+----
+date('2018-04-05')
+----
+
+[.description]
+Returns a date parsed from a string.
+====
+
+
+====
+[source, cypher, role=noheader]
+----
+localtime('12:45:30.25')
+----
+
+[.description]
+Returns a time with no time zone.
+====
+
+
+====
+[source, cypher, role=noheader]
+----
+time('12:45:30.25+01:00')
+----
+
+[.description]
+Returns a time in a specified time zone.
+====
+
+
+====
+[source, cypher, role=noheader]
+----
+localdatetime('2018-04-05T12:34:00')
+----
+
+[.description]
+Returns a datetime with no time zone.
+====
+
+
+====
+[source, cypher, role=noheader]
+----
+datetime('2018-04-05T12:34:00[Europe/Berlin]')
+----
+
+[.description]
+Returns a datetime in the specified time zone.
+====
+
+
+====
+[source, cypher, role=noheader]
+----
+datetime({epochMillis: 3360000})
+----
+
+[.description]
+Transforms 3360000 as a UNIX Epoch time into a normal datetime.
+====
+
+
+[.neo4j-ce.neo4j-ee.aura-dbe.deprecated.test]
 ====
 [source, cypher, role=noheader]
 ----
@@ -291,5 +362,42 @@ date({year: $year, month: $month, day: $day})
 ----
 
 [.description]
-All of the temporal functions can also be called with a map of named components. This example returns a date from year, month and day components. Each function supports a different set of possible components.
+All of the temporal functions can also be called with a map of named components.
+This example returns a date from year, month and day components.
+Each function supports a different set of possible components.
+====
+
+
+====
+[source, cypher, role=noheader]
+----
+datetime({date: $date, time: $time})
+----
+
+[.description]
+Temporal types can be created by combining other types.
+This example creates a datetime from a date and a time.
+====
+
+
+====
+[source, cypher, role=noheader]
+----
+date({date: $datetime, day: 5})
+----
+
+[.description]
+Temporal types can be created by selecting from more complex types, as well as overriding individual components. This example creates a date by selecting from a datetime, as well as overriding the day component.
+====
+
+
+====
+[source, cypher, role=noheader]
+----
+WITH date('2018-04-05') AS d
+RETURN d.year, d.month, d.day, d.week, d.dayOfWeek
+----
+
+[.description]
+Accessors allow extracting components of temporal types.
 ====

@@ -343,6 +343,7 @@ body.cheat-sheet .exampleblock > .content {
   padding: 0;
   border: none;
   flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 body.cheat-sheet .example-block > .content > .listingblock {
@@ -366,15 +367,16 @@ body.cheat-sheet .exampleblock > .content > div {
   display: flex;
   flex: 0 0 42%;
   flex-grow: 1;
-  padding: 1rem 0 1rem 0.5rem;
+  padding: 1rem 0.5rem;
   margin: 0;
 }
 
 body.cheat-sheet .exampleblock > .content > div.labels {
   flex: 0 0 100%;
   justify-content: flex-start;
-  gap: 0.5rem;
   padding-bottom: 0;
+  padding-top: 1rem;
+  gap: 0.25rem;
 }
 
 body.cheat-sheet .exampleblock > .content > div.extra {
@@ -382,7 +384,7 @@ body.cheat-sheet .exampleblock > .content > div.extra {
   border-top: none;
 }
 
-body.cheat-sheet .description ul {
+body.cheat-sheet .exampleblock > .content > div.description ul {
   list-style: circle;
   line-height: 1.25;
   margin: 0;
@@ -396,6 +398,7 @@ body.cheat-sheet .page-labels {
   margin: 0;
   padding: 0;
   align-items: center;
+  gap: 0.25rem;
   /* border-bottom: 1px solid var(--color-grey-200); */
 }
 
