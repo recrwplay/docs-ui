@@ -112,8 +112,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function addLabel (el, match) {
     const div = createElement('div', 'paragraph')
+    let labelType = 'labels'
     if (el.classList.contains('exampleblock')) div.classList.add('labels')
-    else div.classList.add('page-labels')
+    else {
+      div.classList.add('page-labels')
+      labelType = 'page-labels'
+    }
     const p = createElement('p')
     const span = createElement('span', `label label--${match}`)
 
@@ -123,12 +127,17 @@ document.addEventListener('DOMContentLoaded', function () {
     p.appendChild(span)
 
     // if there is a label div, add the new label
-    const labelsDiv = el.firstElementChild.querySelector('div.labels')
+    const labelsDiv = el.firstElementChild.querySelector(`div.${labelType}`)
     if (labelsDiv) {
       labelsDiv.append(p)
     } else {
       div.appendChild(p)
-      el.firstElementChild.appendChild(div)
+
+      if (labelType === 'labels') {
+        el.firstElementChild.prepend(div)
+      } else {
+        el.firstElementChild.after(div)
+      }
     }
   }
 
