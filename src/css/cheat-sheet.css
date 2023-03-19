@@ -181,6 +181,7 @@ body.cheat-sheet .nav-panel-versions .dropdown .dropdown-styles {
 body.cheat-sheet .selectors > div {
   align-items: center;
   display: flex;
+  /* flex-wrap: wrap; */
   box-shadow: none;
   margin: 0.25rem;
   /* padding: 0.25rem 0; */

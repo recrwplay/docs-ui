@@ -101,6 +101,63 @@ Text describing the example. This example has no role, and therefore no labels. 
 This example only applies to Neo4j Enterprise Edition and is marked with the `[.neo4j-ee]` role.
 ====
 
+[.read.neo4j-ee]
+== Read queries
+
+
+=== Read queries subsection
+
+
+====
+[source, cypher, role=noheader]
+----
+<CYPHER EXAMPLE>
+----
+
+[.description]
+Text describing the example. This example has no role, and therefore no labels. It is displayed in all views.
+====
+
+[.neo4j-ee]
+====
+[source, cypher, role=noheader]
+----
+<CYPHER EXAMPLE>
+----
+
+[.description]
+This example only applies to Neo4j Enterprise Edition and is marked with the `[.neo4j-ee]` role.
+====
+
+[.write.neo4j-ee]
+== Write queries
+
+
+=== Write queries subsection
+
+
+====
+[source, cypher, role=noheader]
+----
+<CYPHER EXAMPLE>
+----
+
+[.description]
+Text describing the example. This example has no role, and therefore no labels. It is displayed in all views.
+====
+
+[.neo4j-ee]
+====
+[source, cypher, role=noheader]
+----
+<CYPHER EXAMPLE>
+----
+
+[.description]
+This example only applies to Neo4j Enterprise Edition and is marked with the `[.neo4j-ee]` role.
+====
+
+
 === link:{neo4j-docs-base-uri}/cypher-manual/{page-version}/clauses/match/[Title with link^]
 
 
@@ -136,8 +193,20 @@ RETURN n AS node
 Displayed for Neo4j Enterprise Edition and AuraDS Enterprise
 
 [.extra]
+--
 Some additional content.
 Can be any arbitrary asciidoc blocks and elements.
+
+|===
+| Name | Description
+
+| Asciidoctor
+| *Awesome* way to write documentation
+
+| Micronaut
+| Low resource usage and fast startup micro services
+|===
+--
 ====
 
 
